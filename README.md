@@ -1,6 +1,6 @@
 # sata-wooordhunt
 
-API Library for (http://wooordhunt.ru/)[http://wooordhunt.ru/].
+API Library for [http://wooordhunt.ru/](http://wooordhunt.ru/).
 
 # How to use
 
