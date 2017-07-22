@@ -5,7 +5,7 @@ API Library for [http://wooordhunt.ru/](http://wooordhunt.ru/).
 # How to use
 
 ```js
-import wooordhunt from 'wooordhunt';
+import wooordhunt from 'sata-wooordhunt';
 
 // fetch only phrases
 wooordhunt('cat', ['phrases'])
