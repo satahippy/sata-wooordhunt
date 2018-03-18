@@ -8,6 +8,7 @@ describe('wooordhunt', function () {
                 assert.hasAllKeys(result, ['word', 'examples']);
                 assert.equal(result.word, 'cat');
                 assert.isNotEmpty(result.examples);
+                assert.notInclude(result.examples[0].translation, '☰');
             });
     });
 
