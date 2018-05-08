@@ -12,6 +12,15 @@ describe('wooordhunt', function () {
             });
     });
 
+    it('should return examples for composite word', function () {
+        return wooordhunt('by far', ['examples'])
+            .then(result => {
+                assert.isNotEmpty(result.examples);
+                assert.equal(result.examples[0].original, 'John\'s idea is by far the best option.');
+                assert.equal(result.examples[0].translation, 'План Джона — однозначно лучший вариант.');
+            });
+    });
+
     it('should return phrases', function () {
         return wooordhunt('cat', ['phrases'])
             .then(result => {
