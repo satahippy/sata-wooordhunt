@@ -49,4 +49,14 @@ describe('wooordhunt', function () {
                 assert.isNotEmpty(result.phrases);
             });
     });
+
+    it('should return empty object if word is not found', function () {
+        return wooordhunt('asdasd')
+            .then(result => {
+                assert.hasAllKeys(result, ['word', 'examples', 'phrases']);
+                assert.equal(result.word, 'asdasd');
+                assert.isEmpty(result.examples);
+                assert.isEmpty(result.phrases);
+            });
+    });
 });
