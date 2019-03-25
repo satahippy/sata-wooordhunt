@@ -30,6 +30,24 @@ describe('wooordhunt', function () {
             });
     });
 
+    it('should return translations', function () {
+        return wooordhunt('cat', ['translations'])
+            .then(result => {
+                assert.hasAllKeys(result, ['word', 'translations']);
+                assert.equal(result.word, 'cat');
+                assert.isNotEmpty(result.translations);
+            });
+    });
+
+    it('should return hidden translations', function () {
+        return wooordhunt('run', ['translations'])
+            .then(result => {
+                assert.hasAllKeys(result, ['word', 'translations']);
+                assert.equal(result.word, 'run');
+                assert.isAbove(result.translations.length, 100);
+            });
+    });
+
     it('should return examples & phrases', function () {
         return wooordhunt('cat', ['examples', 'phrases'])
             .then(result => {
